@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LISTMUSIC" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\WIN7\Desktop\LISTMUSIC.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True" SettingsObjectName="MI.Properties.Settings" SettingsPropertyName="LISTMUSICConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ALBUM" Member="ALBUMs">
+    <Type Name="ALBUM">
+      <Column Name="ALBUMID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ALBUMNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SINGERID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QUANTITY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ISSUE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DESCRIBE" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="ALBUM_SONG" Member="SONGs" ThisKey="ALBUMID" OtherKey="ALBUMID" Type="SONG" />
+      <Association Name="SINGER_ALBUM" Member="SINGER" ThisKey="SINGERID" OtherKey="SINGERID" Type="SINGER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EMOTION" Member="EMOTIONs">
+    <Type Name="EMOTION">
+      <Column Name="EMOTIONID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EMOTIONTYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="EMOTION_SONG" Member="SONGs" ThisKey="EMOTIONID" OtherKey="EMOTIONID" Type="SONG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PLAYLIST" Member="PLAYLISTs">
+    <Type Name="PLAYLIST">
+      <Column Name="NAMELIST" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PUBLISH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PLAYLISTID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SINGER" Member="SINGERs">
+    <Type Name="SINGER">
+      <Column Name="SINGERID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SINGERNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="REALNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CITIZENSHIP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BIRTHDAY" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="COMPANY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AVATAR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="SINGER_ALBUM" Member="ALBUMs" ThisKey="SINGERID" OtherKey="SINGERID" Type="ALBUM" />
+      <Association Name="SINGER_SONG" Member="SONGs" ThisKey="SINGERID" OtherKey="SINGERID" Type="SONG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SONG" Member="SONGs">
+    <Type Name="SONG">
+      <Column Name="SONGID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SONGNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CATEGORY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ALBUMID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SINGERID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LANGUAGE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MUSICIAN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LYRICS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PUBLISH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KARAOKE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EMOTIONID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PLAYLISTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="INSTRUMENT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VOTE" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="ALBUM_SONG" Member="ALBUM" ThisKey="ALBUMID" OtherKey="ALBUMID" Type="ALBUM" IsForeignKey="true" />
+      <Association Name="SINGER_SONG" Member="SINGER" ThisKey="SINGERID" OtherKey="SINGERID" Type="SINGER" IsForeignKey="true" />
+      <Association Name="EMOTION_SONG" Member="EMOTION" ThisKey="EMOTIONID" OtherKey="EMOTIONID" Type="EMOTION" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

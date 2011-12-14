@@ -1,0 +1,12 @@
+C:\Users\WIN7\Downloads\MI\MIclient\bin\Debug\MIclient.exe
+C:\Users\WIN7\Downloads\MI\MIclient\bin\Debug\MIclient.pdb
+C:\Users\WIN7\Downloads\MI\MIclient\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\WIN7\Downloads\MI\MIclient\obj\x86\Debug\MIclient.Form1.resources
+C:\Users\WIN7\Downloads\MI\MIclient\obj\x86\Debug\MIclient.Properties.Resources.resources
+C:\Users\WIN7\Downloads\MI\MIclient\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\WIN7\Downloads\MI\MIclient\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\WIN7\Downloads\MI\MIclient\obj\x86\Debug\MIclient.exe.licenses
+C:\Users\WIN7\Downloads\MI\MIclient\obj\x86\Debug\MIclient.exe
+C:\Users\WIN7\Downloads\MI\MIclient\obj\x86\Debug\MIclient.pdb
+C:\Users\WIN7\Downloads\MI\MIclient\bin\Debug\MIclient.exe.config
+C:\Users\WIN7\Downloads\MI\MIclient\obj\x86\Debug\MIclient.Lyric.resources

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8000/WSHttp_MI?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MI" />
+  <xs:element name="getall">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getallResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="getallResult" nillable="true" type="q1:ArrayOfmusicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Hasmusic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="music" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HasmusicResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HasmusicResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="music" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="GetidResult" nillable="true" type="q2:ArrayOfmusicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Gettitle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GettitleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="GettitleResult" nillable="true" type="q3:ArrayOfmusicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getauthor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="author" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetauthorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="GetauthorResult" nillable="true" type="q4:ArrayOfmusicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getlyric">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lyric" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetlyricResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="GetlyricResult" nillable="true" type="q5:ArrayOfmusicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getgenre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="genre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetgenreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="GetgenreResult" nillable="true" type="q6:ArrayOfmusicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getemotion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="emotion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetemotionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetemotionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ins" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetinsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="GetinsResult" nillable="true" type="q7:ArrayOfmusicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getpub">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pub" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetpubResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="GetpubResult" nillable="true" type="q8:ArrayOfmusicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getkaraoke">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="karaoke" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetkaraokeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="GetkaraokeResult" nillable="true" type="q9:ArrayOfmusicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getlang">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetlangResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="GetlangResult" nillable="true" type="q10:ArrayOfmusicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="musickaraoke">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="timtheo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loctheo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="thoigian" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quocgia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tamtrang" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="musickaraokeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="musickaraokeResult" nillable="true" type="q11:ArrayOfmusicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="musicnhacsi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="timtheo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loctheo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="thoigian" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quocgia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tamtrang" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="musicnhacsiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="musicnhacsiResult" nillable="true" type="q12:ArrayOfmusicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="musiccasi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="timtheo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loctheo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="thoigian" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quocgia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tamtrang" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="musiccasiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="musiccasiResult" nillable="true" type="q13:ArrayOfmusicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="musicloi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="timtheo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loctheo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="thoigian" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quocgia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tamtrang" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="musicloiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="musicloiResult" nillable="true" type="q14:ArrayOfmusicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="musicten">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="timtheo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loctheo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="thoigian" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quocgia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tamtrang" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="musictenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="musictenResult" nillable="true" type="q15:ArrayOfmusicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getsinger">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="singerid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetsingerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="GetsingerResult" nillable="true" type="q16:ArrayOfsingerdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="gettop">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="gettopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="gettopResult" nillable="true" type="q17:ArrayOfmusicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setvote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="musicid" type="xs:int" />
+        <xs:element minOccurs="0" name="vote" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setvoteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getvote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="musicid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getvoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getvoteResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Addmusic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="music" nillable="true" type="q18:musicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddmusicResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Editmusic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="musicid" type="xs:int" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/MI" minOccurs="0" name="music" nillable="true" type="q19:musicdata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditmusicResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Deletemusic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="musicid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletemusicResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

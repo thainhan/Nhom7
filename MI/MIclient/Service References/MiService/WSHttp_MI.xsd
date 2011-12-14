@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MI" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8000/WSHttp_MI?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfmusicdata">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="musicdata" nillable="true" type="tns:musicdata" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfmusicdata" nillable="true" type="tns:ArrayOfmusicdata" />
+  <xs:complexType name="musicdata">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Emotion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Instrument" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Karaoke" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lyric" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="aTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="avatar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bAuthor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cSinger" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dPublish" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="eGenre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vote" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="musicdata" nillable="true" type="tns:musicdata" />
+  <xs:complexType name="fauloutofmemory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lydo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="fauloutofmemory" nillable="true" type="tns:fauloutofmemory" />
+  <xs:complexType name="ArrayOfsingerdata">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="singerdata" nillable="true" type="tns:singerdata" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfsingerdata" nillable="true" type="tns:ArrayOfsingerdata" />
+  <xs:complexType name="singerdata">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aSingername" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bSingerreal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cSingerday" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="eSingercom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fSingeravatar" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="singerdata" nillable="true" type="tns:singerdata" />
+  <xs:complexType name="CustomFaultMsg">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomFaultMsg" nillable="true" type="tns:CustomFaultMsg" />
+</xs:schema>

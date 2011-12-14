@@ -1,0 +1,10 @@
+C:\Users\WIN7\Downloads\MI\MI\bin\Debug\MI.exe.config
+C:\Users\WIN7\Downloads\MI\MI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\WIN7\Downloads\MI\MI\obj\x86\Debug\MI.Form1.resources
+C:\Users\WIN7\Downloads\MI\MI\obj\x86\Debug\MI.Properties.Resources.resources
+C:\Users\WIN7\Downloads\MI\MI\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\WIN7\Downloads\MI\MI\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\WIN7\Downloads\MI\MI\bin\Debug\MI.exe
+C:\Users\WIN7\Downloads\MI\MI\bin\Debug\MI.pdb
+C:\Users\WIN7\Downloads\MI\MI\obj\x86\Debug\MI.exe
+C:\Users\WIN7\Downloads\MI\MI\obj\x86\Debug\MI.pdb

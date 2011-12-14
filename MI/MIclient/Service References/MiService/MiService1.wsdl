@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MiService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IMiService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8000/WSHttp_MI?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8000/WSHttp_MI?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MI" />
+      <xsd:import schemaLocation="http://localhost:8000/WSHttp_MI?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMiService_getall_InputMessage">
+    <wsdl:part name="parameters" element="tns:getall" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_getall_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getallResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_getall_fauloutofmemoryFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/MI" name="detail" element="q1:fauloutofmemory" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Hasmusic_InputMessage">
+    <wsdl:part name="parameters" element="tns:Hasmusic" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Hasmusic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HasmusicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getid" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Gettitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:Gettitle" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Gettitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GettitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getauthor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getauthor" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getauthor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetauthorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getlyric_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getlyric" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getlyric_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetlyricResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getgenre_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getgenre" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getgenre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetgenreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getemotion_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getemotion" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getemotion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetemotionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getins_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getins" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetinsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getpub_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getpub" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getpub_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetpubResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getkaraoke_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getkaraoke" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getkaraoke_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetkaraokeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getlang_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getlang" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getlang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetlangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_musickaraoke_InputMessage">
+    <wsdl:part name="parameters" element="tns:musickaraoke" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_musickaraoke_OutputMessage">
+    <wsdl:part name="parameters" element="tns:musickaraokeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_musicnhacsi_InputMessage">
+    <wsdl:part name="parameters" element="tns:musicnhacsi" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_musicnhacsi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:musicnhacsiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_musiccasi_InputMessage">
+    <wsdl:part name="parameters" element="tns:musiccasi" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_musiccasi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:musiccasiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_musicloi_InputMessage">
+    <wsdl:part name="parameters" element="tns:musicloi" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_musicloi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:musicloiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_musicten_InputMessage">
+    <wsdl:part name="parameters" element="tns:musicten" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_musicten_OutputMessage">
+    <wsdl:part name="parameters" element="tns:musictenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getsinger_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getsinger" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Getsinger_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetsingerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_gettop_InputMessage">
+    <wsdl:part name="parameters" element="tns:gettop" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_gettop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gettopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_setvote_InputMessage">
+    <wsdl:part name="parameters" element="tns:setvote" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_setvote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setvoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_getvote_InputMessage">
+    <wsdl:part name="parameters" element="tns:getvote" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_getvote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getvoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Addmusic_InputMessage">
+    <wsdl:part name="parameters" element="tns:Addmusic" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Addmusic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddmusicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Editmusic_InputMessage">
+    <wsdl:part name="parameters" element="tns:Editmusic" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Editmusic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditmusicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Editmusic_CustomFaultMsgFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/MI" name="detail" element="q2:CustomFaultMsg" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Deletemusic_InputMessage">
+    <wsdl:part name="parameters" element="tns:Deletemusic" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Deletemusic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletemusicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiService_Deletemusic_CustomFaultMsgFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/MI" name="detail" element="q3:CustomFaultMsg" />
+  </wsdl:message>
+  <wsdl:portType name="IMiService">
+    <wsdl:operation name="getall">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/getall" message="tns:IMiService_getall_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/getallResponse" message="tns:IMiService_getall_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMiService/getallfauloutofmemoryFault" name="fauloutofmemoryFault" message="tns:IMiService_getall_fauloutofmemoryFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Hasmusic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/Hasmusic" message="tns:IMiService_Hasmusic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/HasmusicResponse" message="tns:IMiService_Hasmusic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/Getid" message="tns:IMiService_Getid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/GetidResponse" message="tns:IMiService_Getid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Gettitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/Gettitle" message="tns:IMiService_Gettitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/GettitleResponse" message="tns:IMiService_Gettitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getauthor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/Getauthor" message="tns:IMiService_Getauthor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/GetauthorResponse" message="tns:IMiService_Getauthor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getlyric">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/Getlyric" message="tns:IMiService_Getlyric_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/GetlyricResponse" message="tns:IMiService_Getlyric_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getgenre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/Getgenre" message="tns:IMiService_Getgenre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/GetgenreResponse" message="tns:IMiService_Getgenre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getemotion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/Getemotion" message="tns:IMiService_Getemotion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/GetemotionResponse" message="tns:IMiService_Getemotion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/Getins" message="tns:IMiService_Getins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/GetinsResponse" message="tns:IMiService_Getins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getpub">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/Getpub" message="tns:IMiService_Getpub_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/GetpubResponse" message="tns:IMiService_Getpub_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getkaraoke">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/Getkaraoke" message="tns:IMiService_Getkaraoke_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/GetkaraokeResponse" message="tns:IMiService_Getkaraoke_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getlang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/Getlang" message="tns:IMiService_Getlang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/GetlangResponse" message="tns:IMiService_Getlang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="musickaraoke">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/musickaraoke" message="tns:IMiService_musickaraoke_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/musickaraokeResponse" message="tns:IMiService_musickaraoke_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="musicnhacsi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/musicnhacsi" message="tns:IMiService_musicnhacsi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/musicnhacsiResponse" message="tns:IMiService_musicnhacsi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="musiccasi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/musiccasi" message="tns:IMiService_musiccasi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/musiccasiResponse" message="tns:IMiService_musiccasi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="musicloi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/musicloi" message="tns:IMiService_musicloi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/musicloiResponse" message="tns:IMiService_musicloi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="musicten">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/musicten" message="tns:IMiService_musicten_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/musictenResponse" message="tns:IMiService_musicten_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getsinger">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/Getsinger" message="tns:IMiService_Getsinger_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/GetsingerResponse" message="tns:IMiService_Getsinger_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gettop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/gettop" message="tns:IMiService_gettop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/gettopResponse" message="tns:IMiService_gettop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setvote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/setvote" message="tns:IMiService_setvote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/setvoteResponse" message="tns:IMiService_setvote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getvote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/getvote" message="tns:IMiService_getvote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/getvoteResponse" message="tns:IMiService_getvote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Addmusic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/Addmusic" message="tns:IMiService_Addmusic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/AddmusicResponse" message="tns:IMiService_Addmusic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Editmusic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/Editmusic" message="tns:IMiService_Editmusic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/EditmusicResponse" message="tns:IMiService_Editmusic_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMiService/EditmusicCustomFaultMsgFault" name="CustomFaultMsgFault" message="tns:IMiService_Editmusic_CustomFaultMsgFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Deletemusic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiService/Deletemusic" message="tns:IMiService_Deletemusic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiService/DeletemusicResponse" message="tns:IMiService_Deletemusic_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMiService/DeletemusicCustomFaultMsgFault" name="CustomFaultMsgFault" message="tns:IMiService_Deletemusic_CustomFaultMsgFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IMiService" type="tns:IMiService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IMiService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getall">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/getall" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fauloutofmemoryFault">
+        <soap12:fault use="literal" name="fauloutofmemoryFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Hasmusic">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/Hasmusic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getid">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/Getid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Gettitle">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/Gettitle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getauthor">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/Getauthor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getlyric">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/Getlyric" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getgenre">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/Getgenre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getemotion">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/Getemotion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getins">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/Getins" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getpub">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/Getpub" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getkaraoke">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/Getkaraoke" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getlang">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/Getlang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="musickaraoke">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/musickaraoke" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="musicnhacsi">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/musicnhacsi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="musiccasi">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/musiccasi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="musicloi">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/musicloi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="musicten">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/musicten" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getsinger">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/Getsinger" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gettop">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/gettop" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setvote">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/setvote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getvote">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/getvote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Addmusic">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/Addmusic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Editmusic">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/Editmusic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMsgFault">
+        <soap12:fault use="literal" name="CustomFaultMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Deletemusic">
+      <soap12:operation soapAction="http://tempuri.org/IMiService/Deletemusic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMsgFault">
+        <soap12:fault use="literal" name="CustomFaultMsgFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MiService">
+    <wsdl:port name="WSHttpBinding_IMiService" binding="tns:WSHttpBinding_IMiService">
+      <soap12:address location="http://localhost:8000/WSHttp_MI" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:8000/WSHttp_MI</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
